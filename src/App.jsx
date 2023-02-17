@@ -1,7 +1,13 @@
-import './App.css'
+import About from './Pages/About/About'
+import Home from './Pages/Home/Home'
 
 function App() {
-  return <div>Vite-Boileplate</div>
+  return (
+    <div>
+      <Home />
+      <About />
+    </div>
+  )
 }
 
 export default App

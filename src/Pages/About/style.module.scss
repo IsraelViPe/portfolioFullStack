@@ -1,0 +1,14 @@
+@import '../../styles/global';
+
+
+.container {
+  border: solid 1px black;
+  display: flex;
+  h2 {
+    color: $color;
+    font: {
+      size: 50px;
+      family: $body-font;
+    };
+  }
+}
