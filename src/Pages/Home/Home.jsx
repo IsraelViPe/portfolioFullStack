@@ -1,8 +1,8 @@
-import styles from './style.module.scss'
+import './Home.scss'
 
 export default function Home() {
   return (
-    <section className={styles['container']}>
+    <section className="container">
       <div>
         <p>Seja bem Vindo !</p>
         <h2>Eu sou desenvolvedor Web Full-Stack</h2>

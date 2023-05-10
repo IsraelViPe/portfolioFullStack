@@ -1,11 +1,9 @@
-import About from './Pages/About/About'
-import Home from './Pages/Home/Home'
+import { Home } from './Pages'
 
 function App() {
   return (
     <div>
       <Home />
-      <About />
     </div>
   )
 }
