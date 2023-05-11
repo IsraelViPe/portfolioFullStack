@@ -7,13 +7,17 @@ export default function NavBar() {
       <div className="cont__navbar-logo">
         <img src={images.logo} alt="logo" />
       </div>
-      <ul>
-        {['Home', 'Sobre mim', 'Portfolio', 'Contato'].map((item) => (
-          <li key={item}>
-            <a href={`#${item}`}>{item}</a>
-          </li>
-        ))}
-      </ul>
+      <div>
+        <ul className="cont__nav-links">
+          {['Home', 'Sobre mim', 'Portfolio', 'Contato'].map((item) => (
+            <li key={item}>
+              <a href={`#${item}`}>{item}</a>
+            </li>
+          ))}
+        </ul>
+      <div></div>
+      </div>
+      <ul></ul>
     </nav>
   )
 }

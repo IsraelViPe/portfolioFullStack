@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Monofett&family=Rubik+Mono+One&display=swap');
 
 :root {
-  --font-base: "Poppins", sans-serif;
+  --font-base: 'Cutive Mono', monospace;
+  --font-title: 'Monofett', cursive;
+  --font-title2: 'Rubik Mono One', sans-serif;
 
   --emphasis-color: #CCA43B;
   --pri-color: #242F40;

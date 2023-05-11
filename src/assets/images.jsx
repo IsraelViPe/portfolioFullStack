@@ -1,4 +1,4 @@
-import logo from './logo_israel.svg'
+import logo from './logo.svg'
 
 const images = {
   logo
