@@ -7,7 +7,6 @@ export default function SocialMedia() {
     <div className="nav__social">
       <div>
         <BsLinkedin
-          style={{ cursor: 'pointer ' }}
           onClick={() => {
             window.open(
               'https://www.linkedin.com/in/israel-pereira-dev/',
@@ -18,7 +17,6 @@ export default function SocialMedia() {
       </div>
       <div>
         <BsGithub
-          style={{ cursor: 'pointer ' }}
           onClick={() => {
             window.open('https://github.com/IsraelViPe', '_blank')
           }}
