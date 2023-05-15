@@ -1,5 +1,9 @@
 import './Home.scss'
 
 export default function Home() {
-  return <div className="container head-text">Home</div>
+  return (
+    <div id="Home" className="container head-text">
+      Home
+    </div>
+  )
 }

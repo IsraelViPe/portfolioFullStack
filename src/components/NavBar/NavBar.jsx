@@ -1,6 +1,6 @@
 import images from '../../assets/images'
 import SocialMedia from '../SocialMedia/SocialMedia'
-import { HiMenuAlt4, HiX } from 'react-icons/hi'
+import { CgMenuRound, CgCloseO } from 'react-icons/cg'
 import { motion } from 'framer-motion'
 import './NavBar.scss'
 import { useState } from 'react'
@@ -21,15 +21,12 @@ export default function NavBar() {
         ))}
       </ul>
 
-      <div style={{ backgroundColor:"white"}}>
-        <HiMenuAlt4 onClick={() => setToggle(true)} />
+      <div className="cont__navbar-hamburger">
+        <CgMenuRound onClick={() => setToggle(true)} />
 
         {toggle && (
-          <motion.div
-            whileInView={{ x: [300, 0] }}
-            transition={{ duration: 0.85, ease: 'easeOut' }}
-          >
-            <HiX onClick={() => setToggle(false)} />
+          <motion.div transition={{ duration: 0.85, ease: 'easeOut' }}>
+            <CgCloseO onClick={() => setToggle(false)} />
             <ul>
               {['Home', 'Sobre mim', 'Portfolio', 'Contacto'].map((item) => (
                 <li key={item}>
