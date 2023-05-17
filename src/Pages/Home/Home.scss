@@ -1,7 +1,27 @@
 .cont__home {
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   padding: 6rem 0rem;
+  background-color: var(--back-color-sec);
 
+}
+
+.cont__home-info {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+
+}
+
+.cont_home-profile-img {
+
+  img {
+
+  }
 }
