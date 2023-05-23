@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Monofett&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
 
 :root {
-  --font-base: 'Cutive Mono', monospace;
-  --font-title: 'Rubik Mono One', sans-serif;
+  --font-base:'Plus Jakarta Sans', sans-serif;
+  --font-title:'Plus Jakarta Sans', sans-serif;
+
 
   --emphasis-color: #CCA43B;
   --pri-color: #242F40;
@@ -30,8 +31,15 @@
   align-items: center;
 }
 
+.flex_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .head-text {
-  font-size: 2.75rem;
+  font-size: 3.75rem;
   font-family: var(--font-title);
   text-align: center;
   color: var(--text-color);
@@ -47,7 +55,7 @@
 }
 
 .p-text {
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-align: left;
   color: var(--text-color);
   line-height: 1.5;
@@ -57,3 +65,14 @@
   }
 }
 
+.p-bolder {
+  font-size: 1rem;
+  text-align: left;
+  color: var(--text-color);
+  font-weight: bolder;
+  line-height: 1.5;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
+  }
+}
