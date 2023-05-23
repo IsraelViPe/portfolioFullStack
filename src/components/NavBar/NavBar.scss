@@ -113,7 +113,7 @@
 
     box-shadow: 0 1px 10px var(--emphasis-color);
 
-    background: var(--back-col);
+    background: #080808;
 
     svg {
       width: 45px;
@@ -141,7 +141,7 @@
         color: var(--text-color);
 
         text-decoration: none;
-        text-transform: uppercase;
+        text-transform: lowercase;
         font-family: var(--font-title);
 
         transition: all 0.3s ease-in-out;

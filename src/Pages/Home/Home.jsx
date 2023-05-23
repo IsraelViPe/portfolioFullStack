@@ -9,11 +9,11 @@ export default function Home() {
   const heroText = ['oi, eu sou o', '</', 'isreal', '>']
 
   useMotionValueEvent(scrollY, 'change', (x) => {
-    if (x > 50) setShowEmo(true)
+    if (x > 20) setShowEmo(true)
   })
   return (
     <section id="Home" className="cont__home">
-      <div>
+      <div className="home__hero-title">
         {heroText.map((text) => {
           const fullText = (
             <motion.div
@@ -22,7 +22,7 @@ export default function Home() {
                   color: 'var(--emphasis-color)'
                 }
               }
-              whileInView={{ y: [-250, 20], opacity: [0, 0.5, 0.8, 1] }}
+              whileInView={{ y: [-100, 0], opacity: [0, 0.5, 0.8, 1] }}
               transition={{
                 duration: 0.8,
                 delay: text === '</' || text === '>' || text === '/' ? 0.8 : 0.1
@@ -34,11 +34,11 @@ export default function Home() {
           return fullText
         })}
       </div>
-      <div>
+      <div className="home__hero-sub-title">
         <motion.div
           className="secondary"
           whileInView={{
-            x: [-250, 20],
+            x: [100, 0],
             opacity: [0, 0.5, 0.8, 1],
             transition: {
               duration: 0.8,
@@ -46,9 +46,9 @@ export default function Home() {
             }
           }}
         >
-          <h4>
+          <p>
             Desenvolvedor Web <br /> Full Stack <br />
-          </h4>
+          </p>
         </motion.div>
         {showEmo && (
           <motion.div
@@ -57,13 +57,7 @@ export default function Home() {
               rotate: [0, 90]
             }}
           >
-            <span
-              style={{
-                color: 'var(--emphasis-color)'
-              }}
-            >
-              {';)'}
-            </span>
+            <span>{';)'}</span>
           </motion.div>
         )}
       </div>

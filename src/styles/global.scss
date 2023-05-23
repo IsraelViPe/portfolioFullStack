@@ -9,8 +9,8 @@
   --pri-color: #242F40;
   --text-color: #E5E5E5;
   --sec-color: #FFFFFF;
-  --back-color: #222222;
-  --back-color-sec:  #181818;
+  --back-color: #181818;
+  --back-color-sec:  #111111;
 }
 
 .app {
@@ -29,6 +29,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
 .flex_column {
@@ -36,10 +37,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
 .head-text {
-  font-size: 3.75rem;
+  font-size: 2.75rem;
   font-family: var(--font-title);
   text-align: center;
   color: var(--text-color);
