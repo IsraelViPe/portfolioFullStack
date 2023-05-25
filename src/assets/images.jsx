@@ -1,9 +1,9 @@
 import logo from './logo.svg'
-import isViPe from './isViPe.png'
+import profile from './profile.png'
 
 const images = {
   logo,
-  isViPe
+  profile
 }
 
 export default images

@@ -1,0 +1,11 @@
+.cont__portfolio {
+  width: 100%;
+  min-height: 100vh;
+
+  span {
+    color: var(--emphasis-color);
+  }
+
+  padding: 6rem 0 1rem;
+  background-color: var(--back-color-sec);
+}
