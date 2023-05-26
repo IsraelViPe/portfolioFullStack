@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
+import { motion } from 'framer-motion'
 import { FaPhoneAlt } from 'react-icons/fa'
-import { BiMailSend } from 'react-icons/bi'
+import { MdAlternateEmail } from 'react-icons/md'
 import emailjs from '@emailjs/browser'
 import './Contact.scss'
 
@@ -46,45 +47,54 @@ export default function Contact() {
         {' '}
         <span>{'<'}</span> contato <span>{'/>'}</span>{' '}
       </h2>
-      <div>
-        <FaPhoneAlt />
-        <a href="tel:+55(31)98846-9230">+55(31)98846-9230</a>
-      </div>
-      <div>
-        <BiMailSend />
-        <a href="mailto:pereira.israel2070@gmail.com">
-          pereira.israel2070@gmail.com
-        </a>
-      </div>
-      <form onSubmit={handleSubmit} ref={form}>
-        <div>
-          <input
-            type="text"
-            placeholder="Nome:"
-            name="username"
-            value={username}
-            onChange={handleChangeInput}
-          />
+      <motion.div
+      className="flex_row"
+      whileInView={{ opacity: [0, 1] }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+      className="flex_column">
+        <div className="flex_row">
+          <a className="contact__card" href="tel:+55(31)98846-9230">
+            <FaPhoneAlt />
+            <span>+55(31)98846-9230</span>
+          </a>
+          <a
+            className="contact__card"
+            href="mailto:pereira.israel2070@gmail.com"
+          >
+            <MdAlternateEmail />
+            <span>pereira.israel2070@gmail.com</span>
+          </a>
         </div>
-        <div>
-          <input
-            type="email"
-            placeholder="Email :"
-            name="email"
-            value={email}
-            onChange={handleChangeInput}
-          />
-        </div>
-        <div>
-          <textarea
-            placeholder="Sua Mensagem"
-            value={message}
-            name="message"
-            onChange={handleChangeInput}
-          />
-        </div>
-        <button type="submit">{!loading ? 'Enviar' : 'Enviando...'}</button>
-      </form>
+        <form className="contact__form" onSubmit={handleSubmit} ref={form}>
+          <div>
+            <input
+              type="text"
+              placeholder="nome:"
+              name="username"
+              value={username}
+              onChange={handleChangeInput}
+            />
+          </div>
+          <div>
+            <input
+              type="email"
+              placeholder="email :"
+              name="email"
+              value={email}
+              onChange={handleChangeInput}
+            />
+          </div>
+          <div>
+            <textarea
+              placeholder="sua mensagem"
+              value={message}
+              name="message"
+              onChange={handleChangeInput}
+            />
+          </div>
+          <button type="submit">{!loading ? 'enviar' : 'enviando...'}</button>
+        </form>
+      </motion.div>
     </section>
   )
 }

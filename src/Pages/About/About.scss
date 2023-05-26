@@ -10,6 +10,7 @@
 
   div {
     flex-wrap: wrap;
+    margin-top: 1.5rem;
   }
 }
 
@@ -47,6 +48,10 @@
     @media screen and (max-width: 900px) {
       width: 100%;
     }
+  }
+
+  @media screen and (max-width: 900px) {
+    flex-basis: 100%;
   }
 
 }

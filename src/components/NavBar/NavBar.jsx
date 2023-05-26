@@ -38,15 +38,13 @@ export default function NavBar() {
               <motion.div transition={{ duration: 0.85, ease: 'easeOut' }}>
                 <CgCloseO onClick={() => setToggle(false)} />
                 <ul>
-                  {['Home', 'Sobre mim', 'Portfolio', 'Contacto'].map(
-                    (item) => (
-                      <li key={item}>
-                        <a href={`#${item}`} onClick={() => setToggle(false)}>
-                          {item}
-                        </a>
-                      </li>
-                    )
-                  )}
+                  {['Home', 'Sobre mim', 'Portfolio', 'Contato'].map((item) => (
+                    <li key={item}>
+                      <a href={`#${item}`} onClick={() => setToggle(false)}>
+                        {item}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </motion.div>
             )}
