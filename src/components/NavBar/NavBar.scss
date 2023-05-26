@@ -12,6 +12,11 @@
   z-index: 2;
 
   box-shadow: 0 1px 10px var(--emphasis-color);
+
+  @media screen and (max-width: 900px) {
+    padding: 0.4rem 0.4rem;
+  }
+
 }
 
 .cont__navbar-logo {
@@ -24,6 +29,14 @@
 
     @media screen and (min-width: 2000px) {
       height: 50px;
+    }
+
+    @media screen and (max-width: 450px) {
+      height: 20px;
+    }
+
+    @media screen and (max-width: 449px) {
+      display: none;
     }
   }
 }
@@ -95,6 +108,11 @@
       color: var(--text-color);
    }
 
+   @media screen and (max-width: 900px) {
+    width: 35px;
+    height: 35px;
+   }
+
   }
 
   div {
@@ -116,8 +134,8 @@
     background: #080808;
 
     svg {
-      width: 45px;
-      height: 45px;
+      width: 35px;
+      height: 35px;
       color: var(--text-color);
 
       &:hover {
@@ -156,6 +174,10 @@
 
     @media screen and (min-width: 900px) {
       display: none;
+    }
+
+    @media screen and (max-width: 900px) {
+     top: 60px;
     }
   }
 
