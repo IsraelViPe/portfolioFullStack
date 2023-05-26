@@ -8,6 +8,7 @@ import './Contact.scss'
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
   const [loading, setLoading] = useState(false)
+  const [sendedForm, setSendedForm] = useState(false)
   const { username, email, message } = formData
   const form = useRef()
 
@@ -32,6 +33,7 @@ export default function Contact() {
           console.log(result.text)
           setLoading(false)
           setFormData({ name: '', email: '', message: '' })
+          if (result.text === 'OK') setSendedForm(true)
         },
         (error) => {
           console.log(error.text)
@@ -48,10 +50,10 @@ export default function Contact() {
         <span>{'<'}</span> contato <span>{'/>'}</span>{' '}
       </h2>
       <motion.div
-      className="flex_row"
-      whileInView={{ opacity: [0, 1] }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-      className="flex_column">
+        whileInView={{ opacity: [0, 1] }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="flex_column"
+      >
         <div className="flex_row">
           <a className="contact__card" href="tel:+55(31)98846-9230">
             <FaPhoneAlt />
@@ -65,35 +67,57 @@ export default function Contact() {
             <span>pereira.israel2070@gmail.com</span>
           </a>
         </div>
-        <form className="contact__form" onSubmit={handleSubmit} ref={form}>
-          <div>
-            <input
-              type="text"
-              placeholder="nome:"
-              name="username"
-              value={username}
-              onChange={handleChangeInput}
-            />
+        {sendedForm ? (
+          <div className="contact__thankyou-message">
+            <h2>
+              {' '}
+              <span>{'</'}</span> obrigado por entrar em contato{' '}
+              <span>{'>'}</span>
+            </h2>
+            <motion.p
+              whileInView={{
+                opacity: [0.7, 0.5, 0, 1],
+                rotate: [0, 90],
+                transition: {
+                  duration: 0.5,
+                  delay: 0.3
+                }
+              }}
+            >
+              {';)'}
+            </motion.p>
           </div>
-          <div>
-            <input
-              type="email"
-              placeholder="email :"
-              name="email"
-              value={email}
-              onChange={handleChangeInput}
-            />
-          </div>
-          <div>
-            <textarea
-              placeholder="sua mensagem"
-              value={message}
-              name="message"
-              onChange={handleChangeInput}
-            />
-          </div>
-          <button type="submit">{!loading ? 'enviar' : 'enviando...'}</button>
-        </form>
+        ) : (
+          <form className="contact__form" onSubmit={handleSubmit} ref={form}>
+            <div>
+              <input
+                type="text"
+                placeholder="nome:"
+                name="username"
+                value={username}
+                onChange={handleChangeInput}
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                placeholder="email :"
+                name="email"
+                value={email}
+                onChange={handleChangeInput}
+              />
+            </div>
+            <div>
+              <textarea
+                placeholder="sua mensagem"
+                value={message}
+                name="message"
+                onChange={handleChangeInput}
+              />
+            </div>
+            <button type="submit">{!loading ? 'enviar' : 'enviando...'}</button>
+          </form>
+        )}
       </motion.div>
     </section>
   )

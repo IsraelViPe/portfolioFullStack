@@ -17,6 +17,7 @@ export default function Home() {
         {heroText.map((text) => {
           const fullText = (
             <motion.div
+              key={text}
               style={
                 (text === '</' || text === '>') && {
                   color: 'var(--emphasis-color)'
@@ -53,8 +54,12 @@ export default function Home() {
         {showEmo && (
           <motion.div
             whileInView={{
-              opacity: [0, 1],
-              rotate: [0, 90]
+              opacity: [0.7, 0.5, 0, 1],
+              rotate: [0, 90],
+              transition: {
+                duration: 0.5,
+                delay: 0.3
+              }
             }}
           >
             <span>{';)'}</span>
