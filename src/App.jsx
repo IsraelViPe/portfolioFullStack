@@ -1,4 +1,5 @@
 import { Home, About, Portfolio, Contact } from './Pages'
+import CopyRight from './components/CopyRight/CopyRight'
 import { NavBar } from './components/index'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <About />
       <Portfolio />
       <Contact />
+      <CopyRight />
     </div>
   )
 }

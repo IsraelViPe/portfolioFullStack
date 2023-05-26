@@ -6,9 +6,14 @@ import emailjs from '@emailjs/browser'
 import './Contact.scss'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [formData, setFormData] = useState({
+    username: '',
+    email: '',
+    message: ''
+  })
   const [loading, setLoading] = useState(false)
   const [sendedForm, setSendedForm] = useState(false)
+
   const { username, email, message } = formData
   const form = useRef()
 
@@ -18,9 +23,15 @@ export default function Contact() {
   }
 
   const handleSubmit = (e) => {
-    setLoading(true)
     e.preventDefault()
 
+    if (Object.values(formData).some((item) => item === '')) {
+      console.log(Object.values(formData))
+      alert('Preencha todos os campos e depois clicke em enviar.')
+      return
+    }
+
+    setLoading(true)
     emailjs
       .sendForm(
         'service_6diz5mn',
@@ -32,13 +43,13 @@ export default function Contact() {
         (result) => {
           console.log(result.text)
           setLoading(false)
-          setFormData({ name: '', email: '', message: '' })
+          setFormData({ username: '', email: '', message: '' })
           if (result.text === 'OK') setSendedForm(true)
         },
         (error) => {
           console.log(error.text)
           setLoading(false)
-          setFormData({ name: '', email: '', message: '' })
+          setFormData({ username: '', email: '', message: '' })
         }
       )
   }
@@ -47,7 +58,7 @@ export default function Contact() {
     <section className="cont__contact" id="Contato">
       <h2 className="head-text">
         {' '}
-        <span>{'<'}</span> contato <span>{'/>'}</span>{' '}
+        <span>{'</'}</span> contato <span>{'>'}</span>{' '}
       </h2>
       <motion.div
         whileInView={{ opacity: [0, 1] }}
@@ -89,6 +100,8 @@ export default function Contact() {
           </div>
         ) : (
           <form className="contact__form" onSubmit={handleSubmit} ref={form}>
+            <h3>{'escreva sua mensagem  ; )'}</h3>
+            <br />
             <div>
               <input
                 type="text"

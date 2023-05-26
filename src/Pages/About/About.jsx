@@ -8,7 +8,7 @@ export default function About() {
     <section className="cont__about" id="Sobre mim">
       <h2 className="head-text">
         {' '}
-        <span>{'<'}</span> sobre mim <span>{'/>'}</span>{' '}
+        <span>{'</'}</span> sobre mim <span>{'>'}</span>{' '}
       </h2>
       <motion.div
         className="flex_row"
