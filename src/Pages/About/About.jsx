@@ -2,6 +2,7 @@ import images from '../../assets/images'
 import { motion } from 'framer-motion'
 import myAgeCalculator from '../../utils/myAgeCalculator'
 import './About.scss'
+import SkillsList from '../../components/SkillsList/SkillsList'
 
 export default function About() {
   return (
@@ -64,6 +65,14 @@ export default function About() {
           </a>
         </div>
       </motion.div>
+      <div className="about__prof-list-skills">
+        <h3>
+          <span>{'</ '}</span>
+          {'principais tecnologias'}
+          <span>{' >'}</span>
+        </h3>
+        <SkillsList />
+      </div>
     </section>
   )
 }

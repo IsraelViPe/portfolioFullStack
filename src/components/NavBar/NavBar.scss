@@ -16,7 +16,6 @@
   @media screen and (max-width: 900px) {
     padding: 0.4rem 0.4rem;
   }
-
 }
 
 .cont__navbar-logo {
@@ -68,7 +67,7 @@
       color: var(--emphasis-color);
 
       &:after {
-        content: "";
+        content: '';
         width: 40%;
         height: 2px;
         background: var(--emphasis-color);
@@ -78,16 +77,13 @@
       }
     }
 
-
     @media screen and (max-width: 900px) {
       display: none;
     }
   }
-
 }
 
 .cont__navbar-hamburger {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,13 +102,12 @@
 
     &:hover {
       color: var(--text-color);
-   }
+    }
 
-   @media screen and (max-width: 900px) {
-    width: 35px;
-    height: 35px;
-   }
-
+    @media screen and (max-width: 900px) {
+      width: 35px;
+      height: 35px;
+    }
   }
 
   div {
@@ -139,7 +134,7 @@
       color: var(--text-color);
 
       &:hover {
-        color : var(--emphasis-color);
+        color: var(--emphasis-color);
       }
     }
 
@@ -167,7 +162,6 @@
         &:hover {
           color: var(--emphasis-color);
           box-shadow: 0 1px 10px var(--emphasis-color);
-
         }
       }
     }
@@ -177,12 +171,11 @@
     }
 
     @media screen and (max-width: 900px) {
-     top: 60px;
+      top: 60px;
     }
   }
 
   @media screen and (min-width: 900px) {
     display: none;
   }
-
 }

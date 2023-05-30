@@ -31,15 +31,6 @@ const projects = [
     codeLink: '',
     title: 'Em breve',
     tags: []
-  },
-  {
-    name: 'Em breve',
-    img: emConstrucao,
-    description: 'projeto em construção...',
-    projectLink: '',
-    codeLink: '',
-    title: 'Em breve',
-    tags: []
   }
 ]
 

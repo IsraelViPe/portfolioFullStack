@@ -1,0 +1,40 @@
+.skill__list {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-around;
+  gap: 2rem;
+
+}
+
+.skill__list-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 5rem;
+
+    background-color: var(--dark-color);
+
+    box-shadow: 0 3px 10px rgba(51, 51, 51, 0.925);
+
+    svg {
+      width: 60%;
+      height: 60%;
+      color: var(--emphasis-color);
+    }
+  }
+
+  p {
+    margin-top: 0.3rem;
+    font-size: 0.75rem;
+  }
+}
