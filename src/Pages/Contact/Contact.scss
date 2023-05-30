@@ -1,0 +1,146 @@
+.cont__contact {
+  width: 100%;
+  min-height: 100vh;
+
+  span {
+    color: var(--emphasis-color);
+  }
+
+  padding: 6rem 0 1rem;
+  background-color: var(--back-color);
+
+  div {
+    margin-top: 1.5rem;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+
+}
+
+.contact__card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+
+
+  margin: 1.5rem 1.5rem;
+
+  padding: 1.5rem 1rem;
+
+  border-radius: 5px;
+  background-color: var(--back-color-sec);
+  box-shadow: 0 3px 10px rgba(51, 51, 51, 0.925);
+
+  cursor: pointer;
+  text-decoration: none;
+
+  span {
+    color: var(--text-color);
+    font-weight: bolder;
+    font-size: 0.8rem;
+  }
+
+  svg {
+    color: var(--emphasis-color);
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @media screen and (max-width: 600px) {
+    white-space: nowrap;
+    padding: 1rem;
+    margin: 0.5rem 0.5rem;
+  }
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+
+
+  div {
+    width: 100%;
+    margin: 0.75rem 0;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease-in-out;
+
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.95rem;
+      border: none;
+      border-radius: 7px;
+
+      outline: none;
+
+      background-color: var(--text-color);
+
+      color: var(--back-color);
+
+    }
+
+    textarea {
+      height: 170px;
+    }
+
+      &:hover {
+        box-shadow: 1px 1px 30px rgba(51, 51, 51, 0.925);
+      }
+
+  }
+
+  button {
+    padding: 0.8rem 2.6rem;
+    margin-top: 1.5rem;
+
+
+    border-radius: 5rem;
+    border: none;
+    background-color: var(--back-color-sec);
+
+
+    box-shadow: 0 3px 10px rgba(51, 51, 51, 0.925);
+    cursor: pointer;
+    font-weight: bolder;
+    color: var(--text-color);
+
+    &:hover {
+      opacity: 0.7;
+      color: var(--emphasis-color);
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+   width: 90%;
+   font-size: 0.8rem;
+  }
+
+}
+
+.contact__thankyou-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+
+  p {
+    padding: 0.5rem;
+    font-size: 2.3rem;
+    letter-spacing: 0.5rem;
+    font-weight: bolder;
+    color: var(--emphasis-color);
+  }
+}

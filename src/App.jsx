@@ -1,7 +1,17 @@
-import './App.css'
+import { Home, About, Portfolio, Contact } from './Pages'
+import { NavBar, CopyRight } from './components/index'
 
 function App() {
-  return <div>Vite-Boileplate</div>
+  return (
+    <div className="app">
+      <NavBar />
+      <Home />
+      <About />
+      <Portfolio />
+      <Contact />
+      <CopyRight />
+    </div>
+  )
 }
 
 export default App

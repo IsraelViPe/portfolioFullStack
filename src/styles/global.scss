@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+  --font-base:'Plus Jakarta Sans', sans-serif;
+  --font-title:'Plus Jakarta Sans', sans-serif;
+
+
+  --emphasis-color: #CCA43B;
+  --pri-color: #242F40;
+  --text-color: #E5E5E5;
+  --sec-color: #FFFFFF;
+  --back-color: #181818;
+  --back-color-sec:  #111111;
+  --dark-color: #080808;
+}
+
+.app {
+  background-color: var(--back-color);
+  font-family: var(--font-base);
+  color: var(--text-color);
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.flex_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.flex_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.head-text {
+  font-size: 2rem;
+  font-family: var(--font-title);
+  text-align: center;
+  color: var(--text-color);
+
+  @media screen and (min-width: 2000px) {
+    font-size: 4rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 2rem;
+  }
+}
+
+.p-text {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--text-color);
+  line-height: 1.5;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
+  }
+}
+
+.p-bolder {
+  font-size: 1rem;
+  text-align: left;
+  color: var(--text-color);
+  font-weight: bolder;
+  line-height: 1.5;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
+  }
+}
