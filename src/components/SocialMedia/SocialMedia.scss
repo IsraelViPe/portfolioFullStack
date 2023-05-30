@@ -2,10 +2,14 @@
   display: flex;
   gap: 1rem;
 
-  div {
+  button {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-color: var(--back-color);
+
+    appearance: none;
 
     width: 40px;
     height: 40px;

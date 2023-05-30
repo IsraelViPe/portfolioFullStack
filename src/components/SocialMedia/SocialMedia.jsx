@@ -5,23 +5,23 @@ import './SocialMedia.scss'
 export default function SocialMedia() {
   return (
     <div className="nav__social">
-      <div>
-        <BsLinkedin
-          onClick={() => {
-            window.open(
-              'https://www.linkedin.com/in/israel-pereira-dev/',
-              '_blank'
-            )
-          }}
-        />
-      </div>
-      <div>
-        <BsGithub
-          onClick={() => {
-            window.open('https://github.com/IsraelViPe', '_blank')
-          }}
-        />
-      </div>
+      <button
+        onClick={() => {
+          window.open(
+            'https://www.linkedin.com/in/israel-pereira-dev/',
+            '_blank'
+          )
+        }}
+      >
+        <BsLinkedin />
+      </button>
+      <button
+        onClick={() => {
+          window.open('https://github.com/IsraelViPe', '_blank')
+        }}
+      >
+        <BsGithub />
+      </button>
     </div>
   )
 }

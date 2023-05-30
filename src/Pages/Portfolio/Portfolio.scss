@@ -8,4 +8,125 @@
 
   padding: 6rem 0 1rem;
   background-color: var(--back-color-sec);
+
+  div {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
+
+.portfolio__card {
+  width: 350px;
+  flex-direction: column;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  background-color: var(--dark-color);
+
+  box-shadow: 0 3px 10px rgba(51, 51, 51, 0.925);
+
+  &:hover{
+    box-shadow: 0 0.6px 5px var(--emphasis-color);
+}
+
+}
+
+.portfolio__card-img {
+  width: 100%;
+  height: 400px;
+  position: relative;
+
+  img{
+    width: 85%;
+    height: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+}
+
+.portfolio__hover {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: space-evenly;
+  // border: solid 1px white;
+  padding: 1rem;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+
+  background-color: var(--dark-color);
+
+}
+
+.portfolio__hover-info {
+  display: flex;
+  flex-direction: column;
+
+  h4 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: var(--emphasis-color);
+  }
+
+  p {
+    font-size: 0.9rem;
+    font-weight: 450;
+    text-align: center;
+  }
+
+}
+
+.portfolio__hover-links {
+
+   div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    color: var(--text-color);
+
+    margin: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    svg{
+      width: 50%;
+      height: 50%;
+      color: var(--back-color-sec);
+  }
+  }
+  }
+
+  .portfolio__hover-tags {
+    ul {
+      display: flex;
+      // align-items: center;
+      gap: 1rem;
+    }
+
+    li {
+     list-style: none;
+     font-size: 0.8rem;
+     color: var(--text-color);
+     font-weight: bold;
+     padding: 0.2rem;
+     background-color: var(--dark-color);
+     border-radius: 5px;
+     box-shadow: 0 0.6px 5px var(--emphasis-color);
+     transition: all 0.3s ease;
+
+    }
+  }
