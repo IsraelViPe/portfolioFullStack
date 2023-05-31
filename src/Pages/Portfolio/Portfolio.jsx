@@ -6,9 +6,22 @@ import data from '../../data/projects'
 
 export default function Portfolio() {
   const [projects, setProjects] = useState([])
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+
+  console.log(screenWidth)
 
   useEffect(() => {
     setProjects(data)
+
+    function handleResize() {
+      setScreenWidth(window.innerWidth)
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
   }, [])
 
   return (
@@ -24,12 +37,17 @@ export default function Portfolio() {
               <img src={project.img} alt={project.name} />
               <motion.div
                 className="portfolio__hover"
-                whileHover={{ opacity: [0, 0.9] }}
-                transition={{
-                  duration: 0.25,
-                  ease: 'easeInOut',
-                  staggerChildren: 0.5
-                }}
+                whileHover={screenWidth >= 900 ? { opacity: [0, 0.9] } : {}}
+                whileInView={screenWidth < 900 ? { opacity: [0, 0.9] } : {}}
+                transition={
+                  screenWidth >= 900
+                    ? {
+                        duration: 0.25,
+                        ease: 'easeInOut',
+                        staggerChildren: 0.5
+                      }
+                    : { duration: 2 }
+                }
               >
                 <div className="portfolio__hover-info">
                   <h4>{project.title}</h4>
