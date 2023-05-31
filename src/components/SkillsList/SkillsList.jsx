@@ -1,4 +1,5 @@
 import './SkillsList.scss'
+import { motion } from 'framer-motion'
 
 import { TfiHtml5 } from 'react-icons/tfi'
 import {
@@ -36,10 +37,15 @@ export default function SkillsList() {
   return (
     <div className="skill__list">
       {icons.map((icon, index) => (
-        <div className="skill__list-card" key={index}>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+          className="skill__list-card"
+          key={index}
+        >
           <div>{icon.component && <icon.component />}</div>
           <p>{icon.name}</p>
-        </div>
+        </motion.div>
       ))}
     </div>
   )
