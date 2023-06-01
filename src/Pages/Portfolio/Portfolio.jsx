@@ -58,6 +58,9 @@ export default function Portfolio() {
                     href={project.projectLink}
                     target="_blank"
                     rel="noreferrer"
+                    style={
+                      project.projectLink === '' ? { display: 'none' } : null
+                    }
                   >
                     <motion.div
                       whileHover={{ scale: [0, 0.9] }}
@@ -67,7 +70,12 @@ export default function Portfolio() {
                       <AiFillEye />
                     </motion.div>
                   </a>
-                  <a href={project.codeLink} target="_black" rel="noreferrer">
+                  <a
+                    href={project.codeLink}
+                    target="_black"
+                    rel="noreferrer"
+                    style={project.codeLink === '' ? { display: 'none' } : null}
+                  >
                     <motion.div
                       whileHover={{ scale: [0, 0.9] }}
                       whileInView={{ scale: [0, 1] }}
