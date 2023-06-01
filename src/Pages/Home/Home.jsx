@@ -6,7 +6,7 @@ export default function Home() {
   const [showEmo, setShowEmo] = useState(false)
   const { scrollY } = useScroll()
 
-  const heroText = ['oi, eu sou o', '</', 'isreal', '>']
+  const heroText = ['oi, eu sou o', '</', 'israel', '>']
 
   useMotionValueEvent(scrollY, 'change', (x) => {
     if (x > 20) setShowEmo(true)
