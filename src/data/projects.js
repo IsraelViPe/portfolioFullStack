@@ -2,6 +2,7 @@ import recipesApp from '../assets/recipesApp.png'
 import storeManager from '../assets/storeManager.png'
 import emConstrucao from '../assets/emConstrucao.png'
 import apiBlog from '../assets/apiBlogs.png'
+import ritTunes from '../assets/ritTunes.png'
 
 const projects = [
   {
@@ -28,11 +29,20 @@ const projects = [
     name: 'API de Blogs',
     img: apiBlog,
     description:
-      'Uma API e um banco de dados para a produção de conteúdo para um blog!',
+      'Uma API e um banco de dados para a produção de conteúdo para blogs.',
     projectLink: '',
     codeLink: 'https://github.com/IsraelViPe/blogs-api',
     title: 'API de Blogs',
     tags: ['API rest', 'nodeJS']
+  },
+  {
+    name: 'R!T',
+    img: ritTunes,
+    description: 'Conheça o R!T e só ouça as melhores !!!',
+    projectLink: 'https://ri-ttunes.vercel.app/',
+    codeLink: 'https://github.com/IsraelViPe/RITtunes',
+    title: 'R!T',
+    tags: ['UI/UX', 'reactJS', 'front end']
   },
   {
     name: 'Em breve',
