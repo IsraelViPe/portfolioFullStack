@@ -58,7 +58,7 @@ export default function About() {
             </li>
           </ul>
           <a
-            href="https://drive.google.com/file/d/1Q4KXc2E0hOwEOkyLsC5W7wJmzQUia1fy/view?usp=share_link"
+            href="https://drive.google.com/file/d/1oGtUzLctqiZjXujWnlFksZxnPZxhWbpt/view?usp=sharing"
             target="blank"
           >
             download CV
